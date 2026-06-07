@@ -66,7 +66,8 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {% for project in projects %}
-            <div class="project-card group relative h-[400px] md:h-[500px] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden border border-white/10 bg-black">
+            <!-- CHANGED: Replaced h-[400px] md:h-[500px] with aspect-square -->
+            <div class="project-card group relative aspect-square rounded-[1.5rem] md:rounded-[2rem] overflow-hidden border border-white/10 bg-black">
                 <img src="{{ project.image }}" 
                      alt="{{ project.title }}"
                      class="w-full h-full object-cover opacity-60 md:opacity-50 grayscale group-hover:grayscale-0 group-hover:scale-110 group-hover:opacity-80 transition-all duration-1000 ease-in-out">
